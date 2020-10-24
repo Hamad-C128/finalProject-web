@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/head.jpg" />
+    <title>Hmamh</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap');
+       @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+  @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500);
+ 
+@keyframes roll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: translate(-150%,-50%) rotate(-3deg) scale(.3);
+    box-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%,-50%) rotate(0deg) scale(1);
+    box-shadow: 0 3px 5px rgba(0,0,0,.3);
+  }
+}
+
+ .proimge{
+  /* animation: roll 1.5s;
+  transform: translate(-50%,-50%);*/
+  left: 50%; 
+  margin-left: 44%;
+  margin-top: 5%;
+ }
+/* 
+.wrapper {
+  
+  animation: roll 1.5s;
+  position: fixed;
+  left: 50%;
+  top: 39%;
+  transform: translate(-50%,-50%);
+  padding: 25px;
+  border-radius: 50%;
+  box-shadow: 0 3px 5px rgba(0,0,0,.3);
+} */
+  #img-result { 
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+    background: #EBC42A;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 3px 5px rgba(0,0,0,.3);
+    color: rgba(0,0,0,0);
+     
+    
+  }
+  
+  #img-result.no-image:before {
+      font-family: 'FontAwesome';
+      content: "\f030";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      color: #fff;
+      font-size: 48px;
+      opacity: .8;
+      transform: translate(-50%, -50%);
+      text-shadow: 0 0px 5px rgba(0,0,0,.4);
+    }
+  .buttonimg {
+    margin-top: 20px;
+    display: block;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background: #EBC42A;
+    width: 100%;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    letter-spacing: 1.3px;
+    font-size: 1.05em;
+    border-radius: 5px;
+    box-shadow: 0 4px 5px rgba(0,0,0,.3);
+    outline: 0;
+    transition: box-shadow .3s,  margin-top .3s, padding .3s;
+    
+   
+  }
+
+.buttonimg:active {
+      box-shadow: none;
+      margin-top: 24px;
+      padding: 8px
+    }
+ 
+
+.upload-result {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow-y: auto;
+}
+  .upload-result__content {
+    word-break: break-all;
+    font-family: 'Source Code Pro';
+    overflow-wrap: break-word;
+  
+}
+ 
+  #img-result {
+      margin-top: 2px;
+      box-shadow: 0 1px 2px rgba(0,0,0,.3);
+    }
+     body{
+       overflow-x: hidden;
+     }
+     .flox{
+       display: flex;
+       margin-top: 100px;
+       margin-left: -200px;
+     }
+      .main{
+        margin-left: 10px;
+       
+      }
+      .button {
+
+       
+        position: relative;
+        display: block;
+        width: 120px;
+        height: 56px;
+        border-radius: 18px;
+        background-color: #EBC42A;
+        border: solid 1px transparent;
+        color: #000;
+        font-size: 18px;
+        font-weight: 300;
+        cursor: pointer;
+        transition: all .1s ease-in-out;
+        
+        
+      }
+      .button:hover {
+          background-color: #DAE0E2;
+         
+          transition: all .1s ease-in-out;
+        }
+      
+      .loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        background: transparent; 
+        margin: 30px auto 0 auto;
+        border: solid 2px #424242;
+        border-top: solid 2px #EBC42A;
+        border-radius: 50%;
+        opacity: 0;
+       
+      }
+      
+      .check {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translate3d(-4px,50px,0);
+        opacity: 0;
+         
+        
+      }
+      
+      .loader.active {
+        animation: loading 2s ease-in-out; 
+        animation-fill-mode: forwards;
+        
+      }
+       
+      .check.active {
+        opacity: 1;
+        transform: translate3d(-4px,4px,0);
+        transition: all .5s cubic-bezier(.49, 1.74, .38, 1.74);
+        transition-delay: .2s;
+      }
+      .check-one:nth-child(1) {
+          display: block;
+          width: 10px;
+          height: 2px;
+          background-color: #fff;
+          transform: rotate(45deg);
+        }
+        .check-two:nth-child(2) {
+          display: block;
+          width: 20px;
+          height: 2px;
+          background-color: #fff;
+          transform: rotate(-45deg) translate3d(14px, -4px, 0);
+          transform-origin: 100%;
+        }
+      @keyframes loading {
+        30% {
+          opacity:1; 
+        }
+        
+        85% {
+          opacity:1;
+          transform: rotate(1080deg);
+          border-color: #262626;
+        }
+        100% {
+          opacity:1;
+          transform: rotate(1080deg);
+           border-color: #EBC42A;
+           
+        }
+      }
+      .loader::after{
+        visibility: hidden;
+      }
+      /*  */
+      
+      .input-group * {
+         all: unset;
+         display: flex;
+         width: 100%;
+       }
+  .input-group {
+    margin-left: 580px;
+    padding: 20px 50px 10px;
+    background-color: #DAE0E2;
+    width: 470px;
+    border-bottom: 5px solid #EBC42A;
+    height: 60px;
+  }
+   
+  #labels {
+    font-size: 1.6rem;
+    position: absolute;
+    transition: all 0.3s ease-in;
+    top: 50%;
+    transform: translateY(-50%);
+  
+    color: #2C3335;
+  }
+  
+  #input {
+    height: 30px;
+    font-size: 1.2rem;
+    color: black;
+  }
+  
+  .input-group:focus-within #labels {
+    font-size: 1.1rem;
+    top: 24%;
+    opacity: .7;
+  }
+  /*  */
+.wrap{
+  position:relative;
+   margin-left: 48%;
+   margin-top: -40px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #1F1F20;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, rgba(58,59,60,1) 0%,rgba(28,28,29,1) 100%);
+  box-shadow:inset 0 3px 4px -2px rgba(94,96,96, 1), 0 0 6px -1px rgba(0,0,0, .8), 0 2px 7px -1px rgba(0,0,0, .5);
+}
+ 
+.onoffswitch {
+    position: relative;
+     width: 60px;
+    -webkit-user-select:none; 
+    -moz-user-select:none;
+     -ms-user-select: none;
+     margin-left: 15px;
+}
+.onoffswitch-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.onoffswitch-label {
+    display: block;
+     overflow: hidden;
+     cursor: pointer;
+    border: 2px solid #999999;
+     border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block;
+     width: 200%; 
+     margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; 
+    float: left; 
+    width: 50%;
+     height: 30px;
+      padding: 0;
+       line-height: 30px;
+    font-size: 14px; 
+    color: white; 
+    font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "YES";
+    padding-right: 15px;
+    background-color: #ebc52a; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "NO";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block;
+     width: 18px;
+      margin: 2px;
+    background: #FFFFFF;
+    position: absolute;
+     top: 0; bottom: 0;
+    right: 38px;
+    border: 2px solid #999999; 
+    border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+
+ 
+   @media all and (max-width: 480px) {
+     .proimge{
+       margin-left: 100px;
+     }
+     .wrap{
+       margin-left: 120px;
+     }
+   }
+
+
+  
+   .container th h1 {
+     font-weight: bold;
+     font-size: 1em;
+     text-align: left;
+     color: #185875;
+}
+
+  .container td {
+	  font-weight: normal;
+	  font-size: 1em;
+     -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+  	 -moz-box-shadow: 0 2px 2px -2px #0E1119;
+      box-shadow: 0 2px 2px -2px #0E1119;
+   }
+
+.container {
+	   text-align: left;
+  	  overflow: hidden;
+  	  width: 100%;
+  	  margin: 0 auto;
+      display: table;
+      padding: 0 0 8em 0;
+    }
+
+.container td, .container th {
+	  padding-bottom: 2%;
+	  padding-top: 4%;
+      padding-left:2%;  
+      width: 10%;
+    }
+
+.container tr:nth-child(odd) {
+      background-color: #1C1C1C;
+     
+}
+
+.container tr:nth-child(even) {
+      background-color: #2C3446;
+       
+}
+
+.container th {
+	  background-color: #1F2739;
+}
+
+.container td:first-child { color: #FFF842; }
+
+.container tr:hover {
+   background-color: #464A52;
+  -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+  -moz-box-shadow: 0 6px 6px -6px #0E1119;  
+   box-shadow: 0 6px 6px -6px #0E1119;
+}
+#time{
+  margin-left: 93%;
+
+}
+
+.container td:hover {
+  background-color: #FFF842;
+  color: #403E10;
+  font-weight: bold;
+  box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+  transform: translate3d(6px, -6px, 0);
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  transition-property: all;
+  transition-timing-function: line;
+}
+
+  .deleteButton {
+    background: transparent;
+    border: 1px solid #f00;
+    border-radius: 2em;
+    color: #f00;
+    display: inline-block;
+    font-size: 12px;
+    height: 20px;
+    line-height: 2px;
+    margin-left: 95%;
+    padding: 0;
+    text-align: center;
+    width: 20px;
+       }
+    
+@media (max-width: 480px) {
+    .container td:nth-child(4),
+    .container th:nth-child(4) { display: none; }
+    .deleteButton{
+        margin-left: 85%;
+     }#time{
+       margin-left: 75%;
+     }
+    }
+     
+    #demo-content{padding-top:100px}.chromeframe{margin:.2em 0;background:#ccc;color:#000;padding:.2em 0}
+      #owlreporter-preloader{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1000}
+      #loader{
+        display:block;
+        position:relative;
+        left:50%;
+        top:50%;
+        width:150px;
+        height:150px;
+        margin:-75px 0 0 -75px;
+        border-radius:50%;
+        border:3px solid transparent;
+        border-top-color:#52575d;
+        -webkit-animation:spin 2s linear infinite;animation:spin 2s linear infinite;z-index:1001
+      }
+      #loader:before{
+        content:"";
+        position:absolute;
+        top:5px;
+        left:5px;
+        right:5px;
+        bottom:5px;
+        border-radius:50%;
+        border:3px solid transparent;
+        border-top-color:#f6f4e6;
+        -webkit-animation:spin 3s linear infinite;
+        animation:spin 3s linear infinite
+      }
+      #loader:after{
+        content:"";
+        position:absolute;
+        top:15px;
+        left:15px;
+        right:15px;
+        bottom:15px;
+        border-radius:50%;
+        border:3px solid transparent;
+        border-top-color:#fddb3a;
+        -webkit-animation:spin 1.5s linear infinite;
+        animation:spin 1.5s linear infinite
+      }
+      @-webkit-keyframes spin{
+        0%{
+        -webkit-transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        transform:rotate(0deg)
+      }100%{
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        transform:rotate(360deg)
+      }
+    }
+      @keyframes spin{
+        0%{
+          -webkit-transform:rotate(0deg);
+          -ms-transform:rotate(0deg);
+          transform:rotate(0deg)
+        }
+        100%{
+          -webkit-transform:rotate(360deg);
+          -ms-transform:rotate(360deg);
+          transform:rotate(360deg)
+        }
+      }
+      #owlreporter-preloader .loader-section{
+        position:fixed;
+        top:0;
+        width:51%;
+        height:100%;
+        background:#222;
+        z-index:1000;
+        -webkit-transform:translateX(0);
+        -ms-transform:translateX(0);
+        transform:translateX(0)
+      }
+      #owlreporter-preloader .loader-section.section-left{
+        left:0
+      }
+      #owlreporter-preloader .loader-section.section-right{
+        right:0
+      }
+      .loaded #owlreporter-preloader .loader-section.section-left{
+        -webkit-transform:translateX(-100%);
+        -ms-transform:translateX(-100%);
+        transform:translateX(-100%);
+        -webkit-transition:all .7s .3s cubic-bezier(0.645,0.045,0.355,1.000);
+        transition:all .7s .3s cubic-bezier(0.645,0.045,0.355,1.000)
+      }
+      .loaded #owlreporter-preloader .loader-section.section-right{
+        -webkit-transform:translateX(100%);
+        -ms-transform:translateX(100%);
+        transform:translateX(100%);
+        -webkit-transition:all .7s .3s cubic-bezier(0.645,0.045,0.355,1.000);
+        transition:all .7s .3s cubic-bezier(0.645,0.045,0.355,1.000)
+      }
+      .loaded #loader{
+        opacity:0;
+        -webkit-transition:all .3s ease-out;
+        transition:all .3s ease-out
+      }
+      .loaded #owlreporter-preloader{
+        visibility:hidden;
+        -webkit-transform:translateY(-100%);
+        -ms-transform:translateY(-100%);
+        transform:translateY(-100%);
+        -webkit-transition:all .3s 1s ease-out;
+        transition:all .3s 1s ease-out
+      }
+      .no-js #owlreporter-preloader{
+        display:none
+      }
+      .no-js h1{
+        color:#222
+      }
+      #content{
+        margin:0 auto;
+        padding-bottom:50px;
+        width:80%;
+        max-width:978px
+      }
+      .ir{
+        background-color:transparent;
+        border:0;
+        overflow:hidden;
+        *text-indent:-9999px
+      }
+      .ir:before{
+        content:"";
+        display:block;
+        width:0;
+        height:150%
+      }
+      .hidden{
+        display:none!important;
+        visibility:hidden
+      }
+      .visuallyhidden{
+        border:0;
+        clip:rect(0 0 0 0);
+        height:1px;
+        margin:-1px;
+        overflow:hidden;
+        padding:0;
+        position:absolute;
+        width:1px
+      }
+      .visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{
+        clip:auto;
+        height:auto;
+        margin:0;
+        overflow:visible;
+        position:static;
+        width:auto
+      }
+      .invisible{
+        visibility:hidden
+      }
+      .clearfix:before,.clearfix:after{
+        content:" ";display:table
+      }
+      .clearfix:after{
+        clear:both
+      }
+      .clearfix{*zoom:1}
+      @media print{*{
+        background:transparent!important;
+        color:#000!important;
+        box-shadow:none!important;
+        text-shadow:none!important
+      }
+      a,a:visited{
+        text-decoration:underline
+      }
+      a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}
+      pre,blockquote{
+        border:1px solid #999;
+        page-break-inside:avoid
+      }
+      thead{
+        display:table-header-group
+      }
+        tr,img{
+          page-break-inside:avoid
+        }
+        img{
+          max-width:100%!important
+        }
+        @page{
+          margin:.5cm
+        }
+        p,h2,h3{
+          orphans:3;widows:3
+        }
+        h2,h3{
+          page-break-after:avoid
+        }
+        }
+
+        .dark .card-container{ 
+            background-color: white;
+          } 
+
+            .msgholder{
+              height: 100%;
+              width: 100%;
+            }
+            .msgcnt{
+              height: 100%;
+              width: 100%;
+            }
+            #csd{
+              height: 100%;
+             
+            }
+             
+
+ 
+
+            .top-link {
+  transition: all .25s ease-in-out;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+  z-index: 10000000;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3em 3em 0;
+    border-radius: 50%;
+    padding: .25em;
+    width: 18px;
+    height: 18px;
+  background-color: #F8F8F8;
+}
+.top-link:hover{
+  background-color: #fddb3a;
+}
+.top-link:active{
+  background-color: #000;
+}
+    .show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+    .hide {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+    #vg {
+        fill: #000;
+        width: 24px;
+        height: 12px;
+    }
+
+    .top-link:hover {
+        background-color: #E8E8E8;
+
+       
+    }
+@media (max-width: 480px) {
+  .top-link{
+    margin-right: 190px;
+  }
+}
+
+
+      </style>
+</head>
+<body style="background-color: #1C1C1C;">
+
+  <script>
+    var p = document.createElement("div");
+p.innerHTML = "<div style='z-index:9999999999999999999999' id='owlreporter-preloader'><div id='loader'></div><div class='loader-section section-left'></div><div class='loader-section section-right'></div></div>";
+document.body.insertBefore(p, document.body.firstChild);
+function pageload(){var e=(new Date).getTime(),t=(e-before)/1e3,n=document.getElementById("loadingtime");n.innerHTML="Page load: "+t+" seconds."}window.onload=function(){pageload()},setTimeout(function(){document.body.className+=" loaded"},1500),document.addEventListener?document.addEventListener("DOMContentLoaded",function(){document.removeEventListener("DOMContentLoaded",arguments.callee,!1),domReady()},!1):document.attachEvent&&document.attachEvent("onreadystatechange",function(){"complete"===document.readyState&&(document.detachEvent("onreadystatechange",arguments.callee),domReady())});
+     window.onload = function(){
+        document.querySelector(".preloader").style.display = "none";
+       }
+       function pageload(){var e=(new Date).getTime(),t=(e-before)/1e3,n=document.getElementById("loadingtime");n.innerHTML="Page load: "+t+" seconds."}window.onload=function(){pageload()},setTimeout(function(){document.body.className+=" loaded"},2500),document.addEventListener?document.addEventListener("DOMContentLoaded",function(){document.removeEventListener("DOMContentLoaded",arguments.callee,!1),domReady()},!1):document.attachEvent&&document.attachEvent("onreadystatechange",function(){"complete"===document.readyState&&(document.detachEvent("onreadystatechange",arguments.callee),domReady())});
+  </script>
+  
+
+  <a class="top-link hide" href="" id="js-top">
+    <svg id="vg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
+    <span class="screen-reader-text"> </span>
+  </a>
+<script>// Set a variable for our button element.
+const scrollToTopButton = document.getElementById('js-top');
+
+// Let's set up a function that shows our scroll-to-top button if we scroll beyond the height of the initial window.
+const scrollFunc = () => {
+// Get the current scroll value
+let y = window.scrollY;
+
+// If the scroll value is greater than the window height, let's add a class to the scroll-to-top button to show it!
+if (y > 0) {
+scrollToTopButton.className = "top-link show";
+} else {
+scrollToTopButton.className = "top-link hide";
+}
+};
+
+window.addEventListener("scroll", scrollFunc);
+
+const scrollToTop = () => {
+// Let's set a variable for the number of pixels we are from the top of the document.
+const c = document.documentElement.scrollTop || document.body.scrollTop;
+
+// If that number is greater than 0, we'll scroll back to 0, or the top of the document.
+// We'll also animate that scroll with requestAnimationFrame:
+// https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
+if (c > 0) {
+window.requestAnimationFrame(scrollToTop);
+// ScrollTo takes an x and a y coordinate.
+// Increase the '10' value to get a smoother/slower scroll!
+window.scrollTo(0, c - c / 10);
+}
+};
+
+// When the button is clicked, run our ScrolltoTop function above!
+scrollToTopButton.onclick = function(e) {
+e.preventDefault();
+scrollToTop();
+}</script>
+  
+  <nav>
+
+
+
+
+    <div  style="margin-right: 200px;" class="logo">
+ <a href="./index.html">   <img class="image"  src="./img/logo.jpg" alt="logo"> </a> 
+    </div> 
+    <ul class="nav-links">
+      <li>
+
+
+        <div  class="containers2">
+          <div class="search-box">
+              <input type="text">
+            <span></span>
+          </div>
+      </div>
+    
+
+      </li>
+      <li>
+
+     
+        <a href="./indexy.html" id="account"><p id="hoverme"> Your Account</p></a>
+          
+      </li>
+      <li>
+          
+      <a href=""> <p  id="hide"class="hoverme"> login </p> </a> 
+      </li>
+      <li>
+     
+           
+     <div class="dropdown">
+      <span><a href="#"><p  id="hoverme"> Settings</p></a></span>
+      <div class="dropdown-content">
+        <a  onclick="myFunction()" href="#"><p  id="hoverme">Light Mode</p></a><br>
+        <a href="#"><p  id="hoverme">Dark Mode</p></a><br>
+       
+      </div>
+    </div>
+    <script> 
+      function myFunction() { 
+      var element = document.body; 
+      element.classList.toggle("dark"); 
+       
+      } 
+  </script> 
+      </li>
+      <li>
+        <a href="./indexa.html"  target="_blank"><p  id="hoverme" style="margin-top: 1px;">About us</p></a> 
+      </li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  <script>
+    const navSlide = () => {
+      const burger =  document.querySelector('.burger');
+      const nav = document.querySelector('.nav-links');
+      const navLinks = document.querySelectorAll('.nav-links li');
+       const x = window.matchMedia("(max-width: 480px)");
+       const y = window.matchMedia("(max-width: 1024px)");
+       if(x.matches == true ){
+    navLinks.hidden = true;
+    nav.hidden = true;
+  }
+      
+   burger.addEventListener('click' ,()=>{
+     
+  // t n 
+   nav.classList.toggle('nav-active');
+   //l
+   
+    navLinks.forEach((link ,index) =>{
+  
+        if(link.style.animation){
+          link.style.animation = '';
+          if(x.matches == true){
+                  navLinks.hidden = true;
+                  nav.hidden = true;
+      }
+        }else{
+          link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;  
+                     
+                  if(x.matches == true){
+                  navLinks.hidden = false;
+                  nav.hidden = false;
+        }
+       }
+      });
+   //animation
+   burger.classList.toggle('toggle');
+   });
+   
+  }
+  navSlide();
+  
+  </script>
+ <!--  -->
+<br> 
+     
+  <!--  -->
+    
+
+
+
+<!--  -->
+
+<div class="card-container"  >
+   <div>
+     <!-- <img   style="width: 120px; margin-left: 180px; margin-bottom: 50px;" src="./img/pro.png" alt="user" /> -->
+      <div class="proimge">
+      <div class="wrapper">
+        <button type="button"  class="no-image buttonimg" id="img-result"></button>
+      </div>
+       
+      <div class="upload-result">
+        <pre class="upload-result__content">
+        </pre>
+      </div>
+  </div>
+
+  
+<div class="textbn">
+    <h3 id="nameu" style="margin-top: 20px;margin-left: -50px;"> </h3>
+     
+    <p id="ubio"  style="text-align:center;" > </p></div>
+</div>
+ 
+ <!--  -->
+<!-- <a href="#popUp" id="openPopUp">Edit</a> -->
+
+<!-- POP UP -->
+<aside id="popUp" class="popup">
+  <div class="popUpContainer">
+     <header>
+      <a href="#!" class="closePopUp">X</a>
+      <h2>Edit Profile</h2>
+     </header>
+    <article style="margin-top: 100px;">
+    
+      
+
+    <form id="add">
+    <div class="group">      
+        <input class="input" id="name" name="namer" maxlength = "20" type="text" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label class="label" >Name</label>
+      </div>
+        
+      <div class="group" style="margin-top: -0px;">      
+        <input class="input"  maxlength = "30" name="bior"  id="bio" type="text" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label class="label" >Bio</label>
+      </div>
+       <button id="savebtn" class="myButton">Save</button> 
+    </form>
+     
+    
+    </article>
+ </div>        
+ <a href="#!" class="closePopUpOutSide"></a>    
+</aside>
+
+<!--  -->
+ 
+  
+  
+    <div class="buttons">
+        
+        <a href="#popUp" > <button id="edit" class="primary ghost">
+          Edit Profile
+        </button></a>
+    </div> 
+    <div id="out">
+    <div style="margin-top: 30px;" class="flox">
+      <div class="group" style="margin-left: 45%; margin-top: 4px;">      
+        <input class="input"  id="input" style="height: 49px;"  maxlength = "20" type="text" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label class="label">Yor Message</label>
+      </div>
+        <!-- input -->
+        <div class="main">
+          <button id="submit" onclick="myVar = setTimeout(myFunction, 3500)"   class="button">Send</button>
+          <div id="grgr" class="loader">
+            <div class="check">
+              <span class="check-one"></span>
+              <span class="check-two"></span>
+            </div>
+          </div>
+          
+        </div>
+       
+      </div>
+      <div class="wrap metrouicss">
+       <p>Anonymous message?</p>
+      
+       <div class="onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked >
+        <label class="onoffswitch-label" for="myonoffswitch">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+<div data-aos="zoom-out-down">
+<div class="msgcnt">
+  <div class="msgholder">
+<div class="card-container" id="csd" style="margin-top: 50px; list-style-type: none;  ">
+                    <!-- <table class="container">
+                         <tbody>
+                                   <tr id="ttrr">     
+                                 <td><h3 id="task4" style="text-align: center;list-style-type: none;"> </h3> 
+                                 <h6 id = "time"> </h6> <button id="delet" class="deleteButton">-</button></td>
+                             </tr>
+                         </tbody>
+                     </table>
+    <script>  
+       document.getElementById('delet').addEventListener('click', () => {
+                document.querySelector('#ttrr').innerHTML = '';
+       }) 
+       var today = new Date();
+    var time = today.toLocaleTimeString();
+    document.getElementById('time').innerHTML = time;
+              
+  </script> -->
+   
+</div>
+</div>
+
+</div>
+</div>
+<br><br><br><br>
+<script>
+   document.getElementById('submit').addEventListener('click', () => {
+             
+             document.querySelector('.input').innerHTML = '';
+             
+             // Let's check if the browser supports notifications
+             if (!("Notification" in window)) {
+               alert("This browser does not support desktop notification");
+             }
+           
+             // Let's check whether notification permissions have already been granted
+             else if (Notification.permission === "granted") {
+               // If it's okay let's create a notification
+               var notification = new Notification("You have a message from Hmamh");
+             }
+           
+             // Otherwise, we need to ask the user for permission
+             else if (Notification.permission !== "denied") {
+               Notification.requestPermission().then(function (permission) {
+                 // If the user accepts, let's create a notification
+                 if (permission === "granted") {
+                   var notification = new Notification("You have a message from Hmamh");
+                 }
+               });
+             }
+               
+             // At last, if the user has denied notifications, and you 
+             // want to be respectful there is no need to bother them any more.
+            
+           });
+     
+     
+     
+     
+</script>
+
+
+<script>
+     function myFunction (){
+       const hid = document.getElementById('grgr');
+               hid.style.visibility = 'hidden';
+     }
+</script>
+<script>
+    var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
+<!--  -->
+
+<!--  -->
+<script>
+  const sendbtn = document.getElementById('submit');
+  sendbtn.addEventListener('click' , () => {
+    const inputs = document.getElementById('input');
+    const texte = inputs.value;
+    
+    const hawy = document.getElementById('csd')
+    hawy.innerHTML = 
+    `
+                  <table class="container">
+                    <tbody>
+                              <tr>     
+                            <td><h3 id="task4" style="text-align: center;">${texte}</h3> 
+                            <h6 id = "time"> </h6> <button id="delet" class="deleteButton">-</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+  `;
+   document.getElementById('delet').addEventListener('click', () => {
+             hawy.innerHTML= '';
+   }) 
+   var today = new Date();
+var time = today.toLocaleTimeString();
+document.getElementById('time').innerHTML = time;
+           
+      })
+</script>
+<!--  -->
+
+<script>
+
+document.getElementById('savebtn').addEventListener('click', () =>{
+    let nameu = document.getElementById('nameu');
+    let ubio = document.getElementById('ubio');
+    let name = document.getElementById('name').value;
+    let bio = document.getElementById('bio').value;
+    nameu.innerHTML = name;
+    ubio.innerHTML = bio
+
+})
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var btn = document.querySelector('.button'),
+      loader = document.querySelector('.loader'),
+      check = document.querySelector('.check');
+  
+  btn.addEventListener('click', function () {
+    loader.classList.add('active');    
+  });
+ 
+  loader.addEventListener('animationend', function() {
+    check.classList.add('active'); 
+
+  });
+});
+</script>
+
+<script>
+  
+  (function () {
+  var uploader = document.createElement('input'),
+    image = document.getElementById('img-result');
+
+  uploader.type = 'file';
+  uploader.accept = 'image/*';
+
+  image.onclick = function() {
+       
+
+        firebase.auth().onAuthStateChanged(function (user) {
+    if (user ) {
+      uploader.click();
+    }else{
+       
+    }
+  })
+  }
+
+  uploader.onchange = function() {
+    var reader = new FileReader();
+    reader.onload = function(evt) {
+      image.classList.remove('no-image');
+      image.style.backgroundImage = 'url(' + evt.target.result + ')';
+      var request = {
+        itemtype: 'test 1',
+        brand: 'test 2',
+        images: [{
+          data: evt.target.result
+        }]
+      };
+                                          
+
+
+      
+      document.querySelector('.upload-result__content').innerHTML = JSON.stringify(request, null, '  ');
+    }
+    reader.readAsDataURL(uploader.files[0]);
+  }
+  
+   
+  
+   
+})();
+
+
+
+</script>
+  
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+ <!--  -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-storage.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyASZYNHupYc04wrTZr28U67oHXZrS4grW0",
+    authDomain: "hmamh-3d8d5.firebaseapp.com",
+    databaseURL: "https://hmamh-3d8d5.firebaseio.com",
+    projectId: "hmamh-3d8d5",
+    storageBucket: "hmamh-3d8d5.appspot.com",
+    messagingSenderId: "779121588551",
+    appId: "1:779121588551:web:39aefca67fd7a49aeff462",
+    measurementId: "G-J6RT9CDQMF"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const db = firebase.firestore();
+  db.settings({ 
+    // timestampsInSnapshots: true
+    });
+</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- <script src="./script.js"></script> -->
+    <script src="./auth.js"></script>
+    <script src="./app.js"></script>
+    <!--  -->
+</body>
+</html>

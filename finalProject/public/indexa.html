@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hmamh</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="conquer.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="bootstrap.min.js"></script>
+        <script type="text/javascript" src="conquer.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+          <script src="wpt/lib/jquery.waypoints.min.js"></script>
+          <script src="wpt/lib/shortcuts/inview.min.js"></script>
+          <link rel="shortcut icon" type="image/x-icon" href="./img/head.jpg" />
+
+          <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+          <link rel="stylesheet" href="./nicepage.css" media="screen">
+          <link rel="stylesheet" href="./Page-1.css" media="screen">
+
+                 <style>
+                   
+                     body{
+						 overflow-x: hidden;
+	font-family: 'Open Sans', sans-serif;
+}
+
+header{
+	background-image: url("https://mcusercontent.com/2b17fb56ff6729858b2933832/images/4d3e346b-760f-4703-bdbb-d9fa38877d5f.jpg");
+	height: 600px;
+ 
+}
+
+#header > ul > li > a{
+	text-decoration: none;
+	color: white;
+}
+
+@media (min-width: 900px) {
+
+	#header{
+		text-align: center;
+		background: #1C1C1C;
+		padding: 15px 0px;
+		width: 100%;
+		position: fixed;
+		z-index: 1;
+	}
+
+	#header > ul > li {
+		display: inline-block;
+		color: white;
+		font-size: 20px;
+		margin-right: 20px;
+		margin-left: 20px;
+		border: 1px solid rgba(145, 145, 145, 0.6);
+		padding: 8px 20px;
+	}
+
+	#header > ul > li:hover {
+		animation-name: navbars;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+		cursor: pointer;
+	}
+
+	@keyframes navbars {
+		0%{
+			background: transparent;
+		}
+		100%{
+			background: rgba(145, 145, 145, 0.4);
+		}
+	}
+
+	#icon{
+		display: none;
+	}
+}
+
+@media (max-width: 900px) {
+	
+	#header{
+		text-align: center;
+		display: none;
+		background: #1C1C1C ;
+		width: 100%;
+		position: fixed;
+		margin-top: 50px;
+		z-index: 1;
+	}
+
+	#header > ul > li {
+		display: block;
+		color: white;
+		font-size: 20px;
+		border: 1px solid rgba(145, 145, 145, 0.6);
+		padding: 10px 0px;
+		margin-top: 10px;
+	}
+
+	#header > ul > li:hover {
+		animation-name: navbars;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+		cursor: pointer;
+	}
+
+	@keyframes navbars {
+		0%{
+			background: transparent;
+		}
+		100%{
+			background: rgba(145, 145, 145, 0.4);
+		}
+	}
+
+	#icon {
+		display: block;
+		text-align: right;
+		padding-right: 50px;
+
+	}
+
+	#icon > i {
+		position: fixed;
+		font-size:48px; 
+		color: white; 
+		cursor: pointer;
+		background: rgba(33, 43, 59, 1);
+		padding: 3px 8px;
+		border: 0px;
+		border-radius: 5px;
+
+	}
+
+	.show {
+		display: block;
+		animation-name: toggleNav;
+		animation-duration: 2s;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes toggleNav{
+		0%{
+			opacity: 0;
+		}
+		100%{
+			opacity: 1;
+		}
+	}
+}
+
+#headSection{
+	display: block;
+	text-align: center;
+	margin: auto auto;
+	width: 100%;
+	padding-top: 250px;
+}
+
+#headSection > h1{
+	color: white;
+	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 50px;
+	text-shadow: 2px 2px black;
+}
+
+#headSection > p{
+	color:#fff;
+	 
+	font-size: 30px;
+	text-shadow: 1px 1px black;
+}
+
+#sectionOne{
+	background: #1C1C1C;
+	padding: 70px 0px;
+}
+
+@media (min-width: 900px) {
+	#rowOne{
+		display: grid;
+		grid-template-columns: 22% 22% 22%;
+		justify-content: center;
+		grid-column-gap: 80px;
+		margin-bottom: 60px;
+	}
+}
+
+@media (max-width: 900px) and (min-width: 630px) {
+	#rowOne{
+		display: grid;
+		grid-template-columns: 40%;
+		justify-content: center;
+		grid-row-gap: 40px;
+		margin-bottom: 60px;
+	}
+}
+
+@media (max-width: 630px) {
+	#rowOne{
+		display: grid;
+		grid-template-columns: 60%;
+		justify-content: center;
+		grid-row-gap: 40px;
+		margin-bottom: 60px;
+	}
+}
+
+#boxOne {
+	text-align: center;
+  background-color: #272727be;
+	padding-bottom: 20px;
+}
+
+#hOne {
+	text-align: center;
+	font-weight: bold;
+	color: #EBC42A;
+} 
+
+#pOne {
+	padding: 0px 20px;
+  text-align: left;
+  color: white;
+} 
+
+#bOne {
+	background-color: #EBC42A;
+	border: 1px solid grey;
+	padding: 10px 30px;
+	border-radius: 5px;
+	color: white;
+	font-weight: bold;
+}
+
+#bOne:hover{
+	animation-name: buttonOne;
+	animation-fill-mode: forwards;
+	animation-duration: 1s; 
+}
+
+@keyframes buttonOne{
+	0%{
+		padding:  10px 30px;
+		background: #EBC42A;
+	}
+	100% {
+		padding: 12px 35px;
+		background: #EBC42A;
+	}
+}
+
+@media (min-width: 900px) {
+	#rowTwo{
+		display: grid;
+		grid-template-columns: 35% 35%;
+		justify-content: center;
+		grid-column-gap: 95px;
+		margin-bottom: 60px;
+	}
+}
+
+@media (max-width: 900px) and (min-width: 630px){
+	#rowTwo{
+		display: grid;
+		grid-template-columns: 63.4%;
+		justify-content: center;
+		grid-row-gap: 40px;
+		margin-bottom: 60px;
+	}
+}
+
+@media (max-width: 630px){
+	#rowTwo{
+		display: grid;
+		grid-template-columns: 75%;
+		justify-content: center;
+		grid-row-gap: 40px;
+		margin-bottom: 60px;
+	}
+}
+
+
+
+
+
+#sectionTwo {
+	background-image: url("https://mcusercontent.com/2b17fb56ff6729858b2933832/images/7df8190e-cf16-4080-a0c5-17b29c71b26a.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	color: rgba(240, 240, 240, 1);
+}
+
+#sectionTwoDiv{
+	padding: 100px 0px;
+	text-align: center;
+}
+
+#sectionTwo > div > div > h1 {
+	text-shadow: 2px 2px black;
+}
+
+
+
+#sectionThree{
+	background: rgba(242, 242, 242, 1);
+  padding: 70px 0px;
+  background:#1C1C1C;
+}
+
+
+@media (min-width: 1200px) {
+	#rowThree{
+		display: grid;
+		grid-template-columns: 16% 16% 16% 16%;
+		justify-content: center;
+		grid-column-gap: 30px;
+		margin-bottom: 60px;
+	}
+}
+
+@media (max-width:1200px) and (min-width:900px) {
+	#rowThree{
+		display: grid;
+		grid-template-columns: 22% 22%;
+		justify-content: center;
+		grid-column-gap: 100px;
+		margin-bottom: 60px;
+		grid-row-gap: 40px;
+	}
+}
+
+@media (max-width: 900px) and (min-width: 630px){
+	#rowThree{
+		display: grid;
+		grid-template-columns: 30%;
+		justify-content: center;
+		grid-row-gap: 40px;
+		margin-bottom: 60px;
+	}
+}
+
+@media (max-width: 630px){
+	#rowThree{
+		display: grid;
+		grid-template-columns: 43%;
+		justify-content: center;
+		grid-row-gap: 40px;
+		margin-bottom: 60px;
+	}
+}
+
+
+#hTwo{
+	text-align: center;
+	font-weight: bold;
+	color: #EBC42A;
+} 
+
+#pTwo{
+	padding: 0px 20px;
+  text-align: left;
+  color: white;
+} 
+
+#bTwo {
+	background-color: rgba(242, 242, 242, 1);
+	border: 1px solid rgba(99, 99, 99, 1);
+	padding: 10px 30px;
+	border-radius: 5px;
+	color: rgba(99, 99, 99, 1);
+	font-weight: bold;
+}
+
+#bTwo:hover{
+	animation-name: buttonTwo;
+	animation-fill-mode: forwards;
+	animation-duration: 1s; 
+}
+
+@keyframes buttonTwo{
+	0%{
+		padding:  10px 30px;
+		background: rgba(242, 242, 242, 1);
+	}
+	100% {
+		padding: 12px 35px;
+		background: rgba(201, 201, 201, 1);
+	}
+} 
+
+#rowFour{
+	display: grid;
+	grid-template-columns: 70%;
+	justify-content: center;
+	margin-bottom: 60px;
+}
+
+#sectionFour {
+	background-image: url("https://mcusercontent.com/2b17fb56ff6729858b2933832/images/4130a74e-8d3b-44f8-aac0-9e134336b512.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+
+}
+
+#sectionFourDiv{
+	padding: 100px 0px;
+	text-align: center;
+}
+
+#divFour{
+	background: rgba(200, 200, 200, 0.3);
+	color: rgba(20, 20, 20, 1);
+	padding: 15px 20px;
+	border: none;
+	border-radius: 7px;
+	font-size: 17px;
+	margin: 10px 15px;
+}
+
+#sectionFour > div > div > h1 {
+	text-shadow: 2px 2px black;
+}
+
+form > div > input{
+	background: rgba(200, 200, 200, 0.3);
+	font-size: 17px;
+	border: none;
+	width: 100%;
+	margin: 6px 0px;
+	padding: 5px 8px;
+	border-radius: 5px;
+}
+
+::placeholder {
+  opacity: 1;
+  color: rgba(20, 20, 20, 1);
+}
+
+form > div > textarea{
+	background: rgba(200, 200, 200, 0.3);
+	font-size: 17px;
+	border: none;
+	width: 100%;
+	margin: 6px 0px;
+	padding: 5px 8px;
+	border-radius: 5px;
+	height: 125px;
+}
+
+#formButton{
+	background-color: rgba(19, 19, 19, 1);
+	border: 1px solid rgba(220, 220, 220, 1);
+	padding: 15px 30px;
+	border-radius: 10px;
+	color: white;
+	font-weight: bold;
+}
+
+#formButton:hover{
+	animation-name: formButton;
+	animation-fill-mode: forwards;
+	animation-duration: 1s; 
+}
+
+@keyframes formButton{
+	0%{
+		padding:  15px 30px;
+		background: rgba(19, 19, 19, 1);
+	}
+	100% {
+		padding: 15px 35px;
+		background: #EBC42A;
+	}
+} 
+
+#portfolio-div{
+    background: rgba(0, 5, 6, 0.9);
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+#portfolio-div-div{
+  text-align: center;
+  color: rgba(245, 245, 245, 0.8);
+}
+
+#social-link{
+  font-family: montserrat;
+  font-size: 23px;
+  list-style: none;
+  display: inline-block;
+  
+  padding: 20px 30px 20px 30px;
+  
+}
+
+
+@keyframes social{
+  0%{top: 0px; color: rgba(245, 245, 245, 0.8);
+	}
+  100%{ top: 5px; color: #EBC42A;
+ 	}
+}
+#portfolio-div-div > ul > li > a{
+	text-decoration: none;
+	color: rgba(245, 245, 245, 0.8);
+}
+#portfolio-div-div > ul > li > a:hover{
+	animation-name: social;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	position: relative;
+}
+
+
+/* These are major animation manipulations from javascript*/
+
+.hideRow{
+	opacity: 1;
+}
+
+.showRow{
+	animation-name: showRowOne;
+	animation-fill-mode: forwards;
+	animation-duration: 3s;
+}
+
+@keyframes showRowOne{
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+#pServices{
+	font-size: 24px;
+}
+
+.hideServ{
+	opacity: 1;
+}
+
+.showServ{
+	animation-name: showServ;
+	animation-fill-mode: forwards;
+	animation-duration: 4s;
+	position: relative;
+}
+
+@keyframes showServ{
+	0%{
+		opacity: 1;
+		left: -100px;
+	}
+	100%{
+		opacity: 1;
+		left: 0px;
+	}
+}
+
+.invalid{
+	border-color: white;
+}
+
+.valid{
+	border-color: yellow;
+}
+
+.errorMes{
+	color: red;
+}
+
+
+
+
+
+
+
+
+.sprite {
+    width: 750px;
+    height: 392px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    background-image: url("https://www.payway.com/wp-content/themes/payway-v1/images/animation/birds-crossing/vr.png");
+    animation: birdsCrossingWeb 5500ms steps(110) infinite 1000ms;
+}
+
+@keyframes birdsCrossingWeb {
+    from {
+        background-position-y: 0;
+    }
+
+    to {
+        background-position-y: -43120px;
+    }
+}
+
+
+
+
+
+
+
+#demo-content{padding-top:100px}.chromeframe{margin:.2em 0;background:#ccc;color:#000;padding:.2em 0}
+      #owlreporter-preloader{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1000}
+      #loader{
+        display:block;
+        position:relative;
+        left:50%;
+        top:50%;
+        width:150px;
+        height:150px;
+        margin:-75px 0 0 -75px;
+        border-radius:50%;
+        border:3px solid transparent;
+        border-top-color:#52575d;
+        -webkit-animation:spin 2s linear infinite;animation:spin 2s linear infinite;z-index:1001
+      }
+      #loader:before{
+        content:"";
+        position:absolute;
+        top:5px;
+        left:5px;
+        right:5px;
+        bottom:5px;
+        border-radius:50%;
+        border:3px solid transparent;
+        border-top-color:#f6f4e6;
+        -webkit-animation:spin 3s linear infinite;
+        animation:spin 3s linear infinite
+      }
+      #loader:after{
+        content:"";
+        position:absolute;
+        top:15px;
+        left:15px;
+        right:15px;
+        bottom:15px;
+        border-radius:50%;
+        border:3px solid transparent;
+        border-top-color:#fddb3a;
+        -webkit-animation:spin 1.5s linear infinite;
+        animation:spin 1.5s linear infinite
+      }
+      @-webkit-keyframes spin{
+        0%{
+        -webkit-transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        transform:rotate(0deg)
+      }100%{
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        transform:rotate(360deg)
+      }
+    }
+      @keyframes spin{
+        0%{
+          -webkit-transform:rotate(0deg);
+          -ms-transform:rotate(0deg);
+          transform:rotate(0deg)
+        }
+        100%{
+          -webkit-transform:rotate(360deg);
+          -ms-transform:rotate(360deg);
+          transform:rotate(360deg)
+        }
+      }
+      #owlreporter-preloader .loader-section{
+        position:fixed;
+        top:0;
+        width:51%;
+        height:100%;
+        background:#222;
+        z-index:1000;
+        -webkit-transform:translateX(0);
+        -ms-transform:translateX(0);
+        transform:translateX(0)
+      }
+      #owlreporter-preloader .loader-section.section-left{
+        left:0
+      }
+      #owlreporter-preloader .loader-section.section-right{
+        right:0
+      }
+      .loaded #owlreporter-preloader .loader-section.section-left{
+        -webkit-transform:translateX(-100%);
+        -ms-transform:translateX(-100%);
+        transform:translateX(-100%);
+        -webkit-transition:all .7s .3s cubic-bezier(0.645,0.045,0.355,1.000);
+        transition:all .7s .3s cubic-bezier(0.645,0.045,0.355,1.000)
+      }
+      .loaded #owlreporter-preloader .loader-section.section-right{
+        -webkit-transform:translateX(100%);
+        -ms-transform:translateX(100%);
+        transform:translateX(100%);
+        -webkit-transition:all .7s .3s cubic-bezier(0.645,0.045,0.355,1.000);
+        transition:all .7s .3s cubic-bezier(0.645,0.045,0.355,1.000)
+      }
+      .loaded #loader{
+        opacity:0;
+        -webkit-transition:all .3s ease-out;
+        transition:all .3s ease-out
+      }
+      .loaded #owlreporter-preloader{
+        visibility:hidden;
+        -webkit-transform:translateY(-100%);
+        -ms-transform:translateY(-100%);
+        transform:translateY(-100%);
+        -webkit-transition:all .3s 1s ease-out;
+        transition:all .3s 1s ease-out
+      }
+      .no-js #owlreporter-preloader{
+        display:none
+      }
+      .no-js h1{
+        color:#222
+      }
+      #content{
+        margin:0 auto;
+        padding-bottom:50px;
+        width:80%;
+        max-width:978px
+      }
+      .ir{
+        background-color:transparent;
+        border:0;
+        overflow:hidden;
+        *text-indent:-9999px
+      }
+      .ir:before{
+        content:"";
+        display:block;
+        width:0;
+        height:150%
+      }
+      .hidden{
+        display:none!important;
+        visibility:hidden
+      }
+      .visuallyhidden{
+        border:0;
+        clip:rect(0 0 0 0);
+        height:1px;
+        margin:-1px;
+        overflow:hidden;
+        padding:0;
+        position:absolute;
+        width:1px
+      }
+      .visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{
+        clip:auto;
+        height:auto;
+        margin:0;
+        overflow:visible;
+        position:static;
+        width:auto
+      }
+      .invisible{
+        visibility:hidden
+      }
+      .clearfix:before,.clearfix:after{
+        content:" ";display:table
+      }
+      .clearfix:after{
+        clear:both
+      }
+      .clearfix{*zoom:1}
+      @media print{*{
+        background:transparent!important;
+        color:#000!important;
+        box-shadow:none!important;
+        text-shadow:none!important
+      }
+      a,a:visited{
+        text-decoration:underline
+      }
+      a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}
+      pre,blockquote{
+        border:1px solid #999;
+        page-break-inside:avoid
+      }
+      thead{
+        display:table-header-group
+      }
+        tr,img{
+          page-break-inside:avoid
+        }
+        img{
+          max-width:100%!important
+        }
+        @page{
+          margin:.5cm
+        }
+        p,h2,h3{
+          orphans:3;widows:3
+        }
+        h2,h3{
+          page-break-after:avoid
+        }
+        }
+  
+        .ml16 {
+  color: #402d2d;
+  padding: 40px 0;
+  font-weight: 800;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  overflow: hidden;
+}
+
+.ml16 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+@media (max-width: 480px) {
+ .ml16 .letter{
+    font-size: 15px;
+  }
+}
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+.top-link {
+  transition: all .25s ease-in-out;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+  z-index: 10000 ;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3em 3em 0;
+    border-radius: 50%;
+    padding: .25em;
+    width: 18px;
+    height: 18px;
+  background-color: #F8F8F8;
+}
+.top-link:hover{
+  background-color: #fddb3a;
+}
+.top-link:active{
+  background-color: #000;
+}
+    .show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+    .hide {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+    #vg {
+        fill: #000;
+        width: 14px;
+        height: 12px;
+        padding-top: -150px;
+    }
+
+    .top-link:hover {
+        background-color: #E8E8E8;
+
+       
+    }
+@media (max-width: 480px) {
+  .top-link{
+    margin-right: 190px;
+  }
+}
+            
+            
+            
+            </style>
+    </head>
+    <body>
+
+
+
+		<script>
+			var p = document.createElement("div");
+		p.innerHTML = "<div style='z-index:9999999999999999' id='owlreporter-preloader'><div id='loader'></div><div class='loader-section section-left'></div><div class='loader-section section-right'></div></div>";
+		document.body.insertBefore(p, document.body.firstChild);
+		function pageload(){var e=(new Date).getTime(),t=(e-before)/1e3,n=document.getElementById("loadingtime");n.innerHTML="Page load: "+t+" seconds."}window.onload=function(){pageload()},setTimeout(function(){document.body.className+=" loaded"},1500),document.addEventListener?document.addEventListener("DOMContentLoaded",function(){document.removeEventListener("DOMContentLoaded",arguments.callee,!1),domReady()},!1):document.attachEvent&&document.attachEvent("onreadystatechange",function(){"complete"===document.readyState&&(document.detachEvent("onreadystatechange",arguments.callee),domReady())});
+			 window.onload = function(){
+				document.querySelector(".preloader").style.display = "none";
+			   }
+			   function pageload(){var e=(new Date).getTime(),t=(e-before)/1e3,n=document.getElementById("loadingtime");n.innerHTML="Page load: "+t+" seconds."}window.onload=function(){pageload()},setTimeout(function(){document.body.className+=" loaded"},2500),document.addEventListener?document.addEventListener("DOMContentLoaded",function(){document.removeEventListener("DOMContentLoaded",arguments.callee,!1),domReady()},!1):document.attachEvent&&document.attachEvent("onreadystatechange",function(){"complete"===document.readyState&&(document.detachEvent("onreadystatechange",arguments.callee),domReady())});
+		  </script>
+		  
+
+      <a class="top-link hide" href="" id="js-top">
+        <svg id="vg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
+        <span class="screen-reader-text"> </span>
+      </a>
+    <script>// Set a variable for our button element.
+    const scrollToTopButton = document.getElementById('js-top');
+    
+    // Let's set up a function that shows our scroll-to-top button if we scroll beyond the height of the initial window.
+    const scrollFunc = () => {
+    // Get the current scroll value
+    let y = window.scrollY;
+    
+    // If the scroll value is greater than the window height, let's add a class to the scroll-to-top button to show it!
+    if (y > 0) {
+    scrollToTopButton.className = "top-link show";
+    } else {
+    scrollToTopButton.className = "top-link hide";
+    }
+    };
+    
+    window.addEventListener("scroll", scrollFunc);
+    
+    const scrollToTop = () => {
+    // Let's set a variable for the number of pixels we are from the top of the document.
+    const c = document.documentElement.scrollTop || document.body.scrollTop;
+    
+    // If that number is greater than 0, we'll scroll back to 0, or the top of the document.
+    // We'll also animate that scroll with requestAnimationFrame:
+    // https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
+    if (c > 0) {
+    window.requestAnimationFrame(scrollToTop);
+    // ScrollTo takes an x and a y coordinate.
+    // Increase the '10' value to get a smoother/slower scroll!
+    window.scrollTo(0, c - c / 10);
+    }
+    };
+    
+    // When the button is clicked, run our ScrolltoTop function above!
+    scrollToTopButton.onclick = function(e) {
+    e.preventDefault();
+    scrollToTop();
+    }</script>
+      
+        <header>
+            <div id="icon">
+				<i class="fa fa-navicon" id="faicon"></div></i>
+				
+            </div>
+            <div id="header">
+                <ul>
+                    <li><a href="#headSection">Home Page</a></li>
+                    <li><a href="#sectionOne">About Us</a></li>
+                    <li><a href="#sectionTwo">Services</a></li>
+                    <li><a href="#sectionFour">Contact</a></li>
+                    <li><a href="#portfolio-div">Portfolio</a></li>
+                </ul>
+            </div>
+    
+            <div id="headSection">
+                 
+        <h1 class="ml16">Welcome to Hmamh</h1>
+        <p class="ml16">We hope to help you</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script>
+  // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml16');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml16 .letter',
+    translateY: [-100,0],
+    easing: "easeOutExpo",
+    duration: 1400,
+    delay: (el, i) => 30 * i
+  }).add({
+    targets: '.ml16',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+	 
+        </header>
+    
+        <section id="sectionOne">
+         
+    
+            <div id="rowTwo">
+              <div data-aos="fade-right">
+                <div id="boxOne" class="grow shadow-4">
+                    <img src="https://mcusercontent.com/2b17fb56ff6729858b2933832/images/112ae1f4-a40c-4505-a289-bb8726c65697.jpg" class="img-responsive">
+                    <h3 id="hOne">Explore</h3>
+                    <p id="pOne">Explore are under development, but when you go there you kneel with people you may know and maybe not, but you enjoy reading messages sent and passing by.<br/><br/></p>
+                   <a href="./index.html"> <button id="bOne" >Go there</button></a>
+                </div>
+              </div>
+              <div data-aos="fade-left">
+                <div id="boxOne" class="grow shadow-4">
+                    <img src="https://mcusercontent.com/2b17fb56ff6729858b2933832/images/0a3f4658-29f8-4c36-99ec-67766fd48504.jpg" class="img-responsive">
+                    <h3 id="hOne">Create an account page</h3>
+                    <p id="pOne">To create an account, you must click the button and then go to Register and write your information. The goal of this step is to create an account for you and save your information.<br/><br/></p>
+					<a href="./indexs.html"> <button id="bOne" >Go there</button></a>
+                </div>
+              </div>
+            </div>
+        </section>
+    
+        <section id="sectionTwo">
+            <div class="row">
+                <div class="col-md-3 col-xs-2"></div>
+                <div id="sectionTwoDiv" class="col-md-6 col-xs-8">
+                    <h1 id="hServices">Our Services</h1><br/><br/>
+                    <p id="pServices" class="hideServ">The development team consists of one person who wishes to make you send messages that you cannot say to others, and no one will know who sent you the message.</p>
+                </div>
+                <div class="col-md-3 col-xs-2"></div>
+            </div>
+        </section>
+    
+        <section id="sectionThree">
+            
+               
+          <div data-aos="zoom-in-up">
+            <div id="rowFour">
+                <div id="boxOne" class="grow shadow-4">
+                    <img src="https://mcusercontent.com/2b17fb56ff6729858b2933832/images/624aca3f-39c2-4c31-9373-67081a2dd6c6.jpg" class="img-responsive">
+                    <h3 id="hTwo">Messages</h3>
+                    <p id="pTwo">The message is sent through an encrypted database that only the user can see</p>
+    
+                    <p id="pTwo">The messages from the converts may reveal to you hidden things in life, as they are important and were used in the past by sending homing pigeons, so we inspired the name of the site from the past.<br/><br/></p>
+					<a href="./indexy.html"> <button id="bOne" >Go there</button></a>
+                </div>
+            </div>
+          </div>
+        </section>
+    
+        <section id="sectionFour">
+            <div class="row">
+                <div class="col-md-3 col-xs-2"></div>
+                <div id="sectionFourDiv" class="col-md-6 col-xs-8">
+                    <h1>Contact Form</h1><br/><br/>
+                    <div id="divFour">
+                        <p id="pFour">For any problem or suggestions, we will follow up after you send your message below</p>
+                    </div>
+                    <form>
+                        <div class="col-md-6">
+                            <input type="text" name="username" placeholder="Name" id="nameField"><br/>
+                            <div id="nameErr" class="errorMes"></div>
+    
+                            <input type="email" name="useremail" placeholder="Email" id="emailField"><br/>
+                            <div id="emailErr" class="errorMes"></div>
+    
+                            <input type="text" name="subject" placeholder="Subject" id="subField">
+                            <div id="subErr" class="errorMes"></div>
+    
+                        </div>
+                        <div class="col-md-6">
+                            <textarea placeholder="Your Message Here..." id="textField"></textarea>
+                        </div>
+                        <input id="formButton" onclick="validate()" name="submit" type="button" value="Send Message"></input>
+                    </form>
+                </div>
+                <div class="col-md-3 col-xs-2"></div>
+            </div>
+        </section>
+    
+    
+       
+    <footer class="u-clearfix u-footer u-grey-80" id="sec-9c32"><div class="u-clearfix u-sheet u-sheet-1">
+      <a href="#" class="u-image u-logo u-image-1" data-image-width="80" data-image-height="40">
+        <img src="./img/logof.jpg" class="u-logo-image u-logo-image-1" data-image-width="80">
+      </a>
+      
+      <div class="u-border-1 u-border-white u-expanded-width u-line u-line-horizontal u-opacity u-opacity-50 u-line-1"></div>
+      <p class="u-align-center u-text u-text-1">Hmamh</p>
+
+
+      <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
+        <a class="u-social-url"  target="_blank" href=""><span class="u-icon u-icon-circle u-social-facebook u-social-type-logo u-icon-1"><svg  class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112"  ><use  xmlns:xlink="" xlink:href="#svg-5078"></use></svg><svg  xmlns=" " xmlns:xlink=" " version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-5078"><path  d="M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2 c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
+        </a>
+        <a class="u-social-url" target="_blank" href="https://twitter.com/alshamari__29"><span class="u-icon u-icon-circle u-social-twitter u-social-type-logo u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112"  ><use xmlns:xlink=" " xlink:href="#svg-4343"></use></svg><svg xmlns=" " xmlns:xlink=" " version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-4343"><path d="M92.2,38.2c0,0.8,0,1.6,0,2.3c0,24.3-18.6,52.4-52.6,52.4c-10.6,0.1-20.2-2.9-28.5-8.2 c1.4,0.2,2.9,0.2,4.4,0.2c8.7,0,16.7-2.9,23-7.9c-8.1-0.2-14.9-5.5-17.3-12.8c1.1,0.2,2.4,0.2,3.4,0.2c1.6,0,3.3-0.2,4.8-0.7 c-8.4-1.6-14.9-9.2-14.9-18c0-0.2,0-0.2,0-0.2c2.5,1.4,5.4,2.2,8.4,2.3c-5-3.3-8.3-8.9-8.3-15.4c0-3.4,1-6.5,2.5-9.2 c9.1,11.1,22.7,18.5,38,19.2c-0.2-1.4-0.4-2.8-0.4-4.3c0.1-10,8.3-18.2,18.5-18.2c5.4,0,10.1,2.2,13.5,5.7c4.3-0.8,8.1-2.3,11.7-4.5 c-1.4,4.3-4.3,7.9-8.1,10.1c3.7-0.4,7.3-1.4,10.6-2.9C98.9,32.3,95.7,35.5,92.2,38.2z"></path></svg></span>
+        </a>
+        <a class="u-social-url" target="_blank" href="https://www.instagram.com/hma.29/"><span class="u-icon u-icon-circle u-social-instagram u-social-type-logo u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112"  ><use xmlns:xlink=" " xlink:href="#svg-72f4"></use></svg><svg xmlns=" " xmlns:xlink=" " version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-72f4"><path d="M55.9,32.9c-12.8,0-23.2,10.4-23.2,23.2s10.4,23.2,23.2,23.2s23.2-10.4,23.2-23.2S68.7,32.9,55.9,32.9z M55.9,69.4c-7.4,0-13.3-6-13.3-13.3c-0.1-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3C69.3,63.5,63.3,69.4,55.9,69.4z"></path><path d="M79.7,26.8c-3,0-5.4,2.5-5.4,5.4s2.5,5.4,5.4,5.4c3,0,5.4-2.5,5.4-5.4S82.7,26.8,79.7,26.8z"></path><path d="M78.2,11H33.5C21,11,10.8,21.3,10.8,33.7v44.7c0,12.6,10.2,22.8,22.7,22.8h44.7c12.6,0,22.7-10.2,22.7-22.7 V33.7C100.8,21.1,90.6,11,78.2,11z M91,78.4c0,7.1-5.8,12.8-12.8,12.8H33.5c-7.1,0-12.8-5.8-12.8-12.8V33.7 c0-7.1,5.8-12.8,12.8-12.8h44.7c7.1,0,12.8,5.8,12.8,12.8V78.4z"></path></svg></span>
+        </a>
+         
+      </div>
+
+    </div>
+  
+
+ 
+  </footer>
+  <section class="u-backlink u-clearfix u-grey-80">
+    <a class="u-link" href="#" target="_blank">
+      <span style="color: white;">hmamh</span>
+    </a>
+    <p class="u-text">
+      <span>Copyright 2020,</span>
+    </p>
+    <a class="u-link" href="https://twitter.com/alshamari__29" target="_blank">
+      <span style="color: white;"> by Hamad Al-Shammari</span>
+    </a>. 
+
+        <script>
+            $(document).ready(function() {
+	$("#faicon").click(function(){
+		$("#header").toggleClass("show");
+	});
+
+	var inview = new Waypoint.Inview({
+      element: $('#rowOne')[0],
+      enter: function() {
+        $("#rowOne").removeClass('hideRow');
+        $("#rowOne").addClass('showRow');
+      },
+      
+    });
+
+    var inview = new Waypoint.Inview({
+      element: $('#rowTwo')[0],
+      enter: function() {
+        $("#rowTwo").removeClass('hideRow');
+        $("#rowTwo").addClass('showRow');
+      },
+      
+    });
+
+    var inview = new Waypoint.Inview({
+      element: $('#rowThree')[0],
+      enter: function() {
+        $("#rowThree").removeClass('hideRow');
+        $("#rowThree").addClass('showRow');
+      },
+      
+    });
+
+    var inview = new Waypoint.Inview({
+      element: $('#rowFour')[0],
+      enter: function() {
+        $("#rowFour").removeClass('hideRow');
+        $("#rowFour").addClass('showRow');
+      },
+      
+    });
+
+
+    var inview = new Waypoint.Inview({
+      element: $('#hServices')[0],
+      enter: function() {
+        $("#pServices").removeClass('hideServ');
+        $("#pServices").addClass('showServ');
+      },
+      
+    });
+});
+
+
+function errorPrint(error, message){
+	document.getElementById(error).innerHTML=message;
+}
+
+function validate(){
+
+	var fname = document.getElementById('nameField').innerHTML='';
+	var email = document.getElementById('emailField').innerHTML='';
+	
+
+	var regEx = {
+		"fname": /[a-zA-Z0-9]/gi,
+		"email" : /^((\w)+([\-\.\+])?(\w)+)+@([A-Za-z])+.([A-Za-z])+(.[A-Za-z]+)?$/,
+	}
+
+
+	if (regEx["fname"].test(fname.value)) {
+		fname.classList = "valid";
+		errorPrint("nameErr", "");
+	} else {
+		errorPrint("nameErr", "Invalid Input");
+		fname.classList = "invalid";
+	}
+
+	if (regEx["email"].test(email.value)) {
+		email.classList = "valid";
+		errorPrint("emailErr", "");
+	} else {
+		errorPrint("emailErr", "Invalid Input");
+		email.classList = "invalid";
+	}
+}
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1500, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+
+
+        </script>
+
+
+
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+    </body>
+    </html>
+
+
+
+ 

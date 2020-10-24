@@ -1,0 +1,42 @@
+.u-section-1 {background-image: none ; margin-right: 20px; margin-top: -60px;}
+.u-section-1 .u-sheet-1 {min-height: 578px}
+.u-section-1 .u-slider-1 {min-height: 443px; width: 1174px; margin: 59px auto 60px -53px; margin-left: 5px;}
+.u-section-1 .u-carousel-indicators-1 {position: absolute; bottom: 10px}
+.u-section-1 .u-carousel-item-1 {margin-top: 0; margin-bottom: 0}
+.u-section-1 .u-container-layout-1 {padding: 30px 55px}
+.u-section-1 .u-gallery-1 {height: 257px; width: 350px; grid-gap: 10px 10px; margin: 25px auto 0 157px}
+.u-section-1 .u-gallery-inner-1 {grid-template-columns: auto; grid-gap: 0 0}
+.u-section-1 .u-image-1 {width: 200px;   margin: -180px 76px 0 auto}
+.u-section-1 .u-image-2 {width: 200px;   margin-top: -200px  }
+.u-section-1 .u-carousel-item-2 {margin-top: 0; margin-bottom: 0}
+.u-section-1 .u-container-layout-2 {padding: 30px ; }
+.u-section-1 .u-image-3 {width: 200px;   margin: 110px auto 0 110px}
+.u-section-1 .u-image-4 {width: 200px;   margin: -215px 90px 30px auto}
+.u-section-1 .u-carousel-control-1 {background-image: none; width: 55px; height: 55px}
+.u-section-1 .u-carousel-control-2 {background-image: none; width: 55px; height: 55px; left: auto; right: 0; position: absolute} 
+
+@media (max-width: 1199px){ .u-section-1 .u-sheet-1 {min-height: 434px}
+.u-section-1 .u-slider-1 {height: auto; width: 940px; margin-left: 0}
+.u-section-1 .u-container-layout-1 {padding-left: 60px; padding-right: 60px}
+.u-section-1 .u-gallery-1 {grid-template-columns: repeat(3, auto); margin-right: initial; margin-left: initial; width: auto}
+.u-section-1 .u-gallery-inner-1 {grid-template-columns: auto auto auto}
+.u-section-1 .u-image-1 {height: 305px}
+.u-section-1 .u-container-layout-2 {padding-left: 60px; padding-right: 60px} }
+
+@media (max-width: 991px){ .u-section-1 .u-sheet-1 {min-height: 835px}
+.u-section-1 .u-slider-1 {width: 720px}
+.u-section-1 .u-gallery-1 {grid-template-columns: repeat(2, auto); width: auto; margin-right: initial; margin-left: initial}
+.u-section-1 .u-gallery-inner-1 {grid-template-columns: repeat(2, auto)}
+.u-section-1 .u-container-layout-2 {padding-right: 65px} }
+
+@media (max-width: 767px){ .u-section-1 .u-slider-1 {width: 540px}
+.u-section-1 .u-container-layout-1 {padding-left: 10px; padding-right: 10px}
+.u-section-1 .u-gallery-1 {grid-template-columns: repeat(1, auto); width: auto; margin-right: initial; margin-left: initial}
+.u-section-1 .u-gallery-inner-1 {grid-template-columns: repeat(1, auto)}
+.u-section-1 .u-container-layout-2 {padding-left: 10px; padding-right: 10px} }
+
+@media (max-width: 480px){ .u-section-1 .u-slider-1 {min-height: 453px; width: 340px}
+.u-section-1 .u-image-1 { width: 100px; height: 100px;   margin-right: 20px}
+.u-section-1 .u-image-2 { width: 100px; height: 100px; margin-left: 20px}
+.u-section-1 .u-image-3 { width: 100px; height: 100px; margin-left: 20px}
+.u-section-1 .u-image-4 { width: 100px; height: 100px;   margin-right: 20px} }

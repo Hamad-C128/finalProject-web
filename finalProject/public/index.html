@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/head.jpg" />
+     <title>Hmamh</title> 
+       
+     
+
+     <link rel="stylesheet" href="./nicepage.css" media="screen">
+     <link rel="stylesheet" href="./Page-1.css" media="screen">
+         <script class="u-script" type="text/javascript" src="./jquery.js" defer=""></script>
+         <script class="u-script" type="text/javascript" src="./nicepage.js" defer=""></script>
+         <meta name="generator" content="Nicepage 2.28.1, nicepage.com">
+         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASZYNHupYc04wrTZr28U67oHXZrS4grW0&callback=initMap" type="text/javascript"></script>
+         
+         <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+         
+ 
+          
+
+     
+ <style>
+   body{
+     background-color: #1C1C1C;
+   }
+ 
+      #demo-content{padding-top:100px}.chromeframe{margin:.2em 0;background:#ccc;color:#000;padding:.2em 0}
+      #owlreporter-preloader{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1000}
+      #loader{
+        display:block;
+        position:relative;
+        left:50%;
+        top:50%;
+        width:150px;
+        height:150px;
+        margin:-75px 0 0 -75px;
+        border-radius:50%;
+        border:3px solid transparent;
+        border-top-color:#52575d;
+        -webkit-animation:spin 2s linear infinite;animation:spin 2s linear infinite;z-index:1001
+      }
+      #loader:before{
+        content:"";
+        position:absolute;
+        top:5px;
+        left:5px;
+        right:5px;
+        bottom:5px;
+        border-radius:50%;
+        border:3px solid transparent;
+        border-top-color:#f6f4e6;
+        -webkit-animation:spin 3s linear infinite;
+        animation:spin 3s linear infinite
+      }
+      
+      #loader:after{
+        content:"";
+        position:absolute;
+        top:15px;
+        left:15px;
+        right:15px;
+        bottom:15px;
+        border-radius:50%;
+        border:3px solid transparent;
+        border-top-color:#fddb3a;
+        -webkit-animation:spin 1.5s linear infinite;
+        animation:spin 1.5s linear infinite
+      }
+      @-webkit-keyframes spin{
+        0%{
+        -webkit-transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        transform:rotate(0deg)
+      }100%{
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        transform:rotate(360deg)
+      }
+    }
+      @keyframes spin{
+        0%{
+          -webkit-transform:rotate(0deg);
+          -ms-transform:rotate(0deg);
+          transform:rotate(0deg)
+        }
+        100%{
+          -webkit-transform:rotate(360deg);
+          -ms-transform:rotate(360deg);
+          transform:rotate(360deg)
+        }
+      }
+      #owlreporter-preloader .loader-section{
+        position:fixed;
+        top:0;
+        width:51%;
+        height:100%;
+        background:#222;
+        z-index:1000;
+        -webkit-transform:translateX(0);
+        -ms-transform:translateX(0);
+        transform:translateX(0)
+      }
+      #owlreporter-preloader .loader-section.section-left{
+        left:0
+      }
+      #owlreporter-preloader .loader-section.section-right{
+        right:0
+      }
+      .loaded #owlreporter-preloader .loader-section.section-left{
+        -webkit-transform:translateX(-100%);
+        -ms-transform:translateX(-100%);
+        transform:translateX(-100%);
+        -webkit-transition:all .7s .3s cubic-bezier(0.645,0.045,0.355,1.000);
+        transition:all .7s .3s cubic-bezier(0.645,0.045,0.355,1.000)
+      }
+      .loaded #owlreporter-preloader .loader-section.section-right{
+        -webkit-transform:translateX(100%);
+        -ms-transform:translateX(100%);
+        transform:translateX(100%);
+        -webkit-transition:all .7s .3s cubic-bezier(0.645,0.045,0.355,1.000);
+        transition:all .7s .3s cubic-bezier(0.645,0.045,0.355,1.000)
+      }
+      .loaded #loader{
+        opacity:0;
+        -webkit-transition:all .3s ease-out;
+        transition:all .3s ease-out
+      }
+      .loaded #owlreporter-preloader{
+        visibility:hidden;
+        -webkit-transform:translateY(-100%);
+        -ms-transform:translateY(-100%);
+        transform:translateY(-100%);
+        -webkit-transition:all .3s 1s ease-out;
+        transition:all .3s 1s ease-out
+      }
+      .no-js #owlreporter-preloader{
+        display:none
+      }
+      .no-js h1{
+        color:#222
+      }
+      #content{
+        margin:0 auto;
+        padding-bottom:50px;
+        width:80%;
+        max-width:978px
+      }
+      .ir{
+        background-color:transparent;
+        border:0;
+        overflow:hidden;
+        *text-indent:-9999px
+      }
+      .ir:before{
+        content:"";
+        display:block;
+        width:0;
+        height:150%
+      }
+      .hidden{
+        display:none!important;
+        visibility:hidden
+      }
+      .visuallyhidden{
+        border:0;
+        clip:rect(0 0 0 0);
+        height:1px;
+        margin:-1px;
+        overflow:hidden;
+        padding:0;
+        position:absolute;
+        width:1px
+      }
+      .visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{
+        clip:auto;
+        height:auto;
+        margin:0;
+        overflow:visible;
+        position:static;
+        width:auto
+      }
+      .invisible{
+        visibility:hidden
+      }
+      .clearfix:before,.clearfix:after{
+        content:" ";display:table
+      }
+      .clearfix:after{
+        clear:both
+      }
+      .clearfix{*zoom:1}
+      @media print{*{
+        background:transparent!important;
+        color:#000!important;
+        box-shadow:none!important;
+        text-shadow:none!important
+      }
+      a,a:visited{
+        text-decoration:underline
+      }
+      a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}
+      pre,blockquote{
+        border:1px solid #999;
+        page-break-inside:avoid
+      }
+      thead{
+        display:table-header-group
+      }
+        tr,img{
+          page-break-inside:avoid
+        }
+        img{
+          max-width:100%!important
+        }
+        @page{
+          margin:.5cm
+        }
+        p,h2,h3{
+          orphans:3;widows:3
+        }
+        h2,h3{
+          page-break-after:avoid
+        }
+        }
+
+        #map {
+          margin-left: 50px;
+        	display: block;
+        	width: 92%;
+          height: 500px;
+          border-radius: 2%;
+         box-shadow: black;
+         background-color: #1C1C1C;
+       }
+       .dark{
+         background-color: #ffffff;
+           
+       }
+       .dark #carousel_8bbc{
+            background-color: #ffffff ;
+}
+
+@media  (max-width: 480) {
+  .map{
+    width: 30px;
+  } 
+ }
+        /* @media (max-width: 480) {
+        #search{
+
+        }
+        #log{
+          margin-left: -100px;
+        }
+      }
+       */
+       .ml11 {
+  font-weight: 700;
+  font-size: 3.5em;
+  margin-left: 35%;
+  margin-top: 90px;
+  margin-bottom: 100px;
+}
+
+.ml11 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+   
+}
+
+.ml11 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #fff;
+  transform-origin: 0 50%;
+}
+
+.ml11 .line12 { 
+  top: 0; 
+  left: 0;
+}
+
+.ml11 .letter {
+  display: inline-block;
+  line-height: 1em;
+  color: white;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.dark .letter  {
+  color: #000;
+  
+}
+.dark .ml11 .line{
+  background-color: #000;
+}
+@media (max-width: 480px) {
+   .ml11 .letters {
+  font-size: 20px;
+  margin-left: -20px;
+}
+.text-wrapper{
+  height: 40px;
+  
+}
+.line12{
+   margin-top: 30px;
+   margin-left: -20px;
+}
+}
+   
+ 
+
+
+
+ 
+
+.top-link {
+  transition: all .25s ease-in-out;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+  z-index: 10000 ;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3em 3em 0;
+    border-radius: 50%;
+    padding: .25em;
+    width: 18px;
+    height: 18px;
+  background-color: #F8F8F8;
+}
+.top-link:hover{
+  background-color: #fddb3a;
+}
+.top-link:active{
+  background-color: #000;
+}
+    .show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+    .hide {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+    #vg {
+        fill: #000;
+        width: 24px;
+        height: 12px;
+    }
+
+    .top-link:hover {
+        background-color: #E8E8E8;
+
+       
+    }
+ 
+ 
+ </style>
+ 
+</head>
+<body>
+   
+
+  <script>
+    var p = document.createElement("div");
+p.innerHTML = "<div style='z-index:99999999999999999100000' id='owlreporter-preloader'><div id='loader'></div><div class='loader-section section-left'></div><div class='loader-section section-right'></div></div>";
+document.body.insertBefore(p, document.body.firstChild);
+function pageload(){var e=(new Date).getTime(),t=(e-before)/1e3,n=document.getElementById("loadingtime");n.innerHTML="Page load: "+t+" seconds."}window.onload=function(){pageload()},setTimeout(function(){document.body.className+=" loaded"},1500),document.addEventListener?document.addEventListener("DOMContentLoaded",function(){document.removeEventListener("DOMContentLoaded",arguments.callee,!1),domReady()},!1):document.attachEvent&&document.attachEvent("onreadystatechange",function(){"complete"===document.readyState&&(document.detachEvent("onreadystatechange",arguments.callee),domReady())});
+     window.onload = function(){
+        document.querySelector(".preloader").style.display = "none";
+       }
+       function pageload(){var e=(new Date).getTime(),t=(e-before)/1e3,n=document.getElementById("loadingtime");n.innerHTML="Page load: "+t+" seconds."}window.onload=function(){pageload()},setTimeout(function(){document.body.className+=" loaded"},2500),document.addEventListener?document.addEventListener("DOMContentLoaded",function(){document.removeEventListener("DOMContentLoaded",arguments.callee,!1),domReady()},!1):document.attachEvent&&document.attachEvent("onreadystatechange",function(){"complete"===document.readyState&&(document.detachEvent("onreadystatechange",arguments.callee),domReady())});
+  </script>
+          
+
+          <a class="top-link hide" href="" id="js-top">
+            <svg id="vg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
+            <span class="screen-reader-text"> </span>
+          </a>
+  <script>// Set a variable for our button element.
+    const scrollToTopButton = document.getElementById('js-top');
+    
+    // Let's set up a function that shows our scroll-to-top button if we scroll beyond the height of the initial window.
+    const scrollFunc = () => {
+      // Get the current scroll value
+      let y = window.scrollY;
+      
+      // If the scroll value is greater than the window height, let's add a class to the scroll-to-top button to show it!
+      if (y > 0) {
+        scrollToTopButton.className = "top-link show";
+      } else {
+        scrollToTopButton.className = "top-link hide";
+      }
+    };
+    
+    window.addEventListener("scroll", scrollFunc);
+    
+    const scrollToTop = () => {
+      // Let's set a variable for the number of pixels we are from the top of the document.
+      const c = document.documentElement.scrollTop || document.body.scrollTop;
+      
+      // If that number is greater than 0, we'll scroll back to 0, or the top of the document.
+      // We'll also animate that scroll with requestAnimationFrame:
+      // https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
+      if (c > 0) {
+        window.requestAnimationFrame(scrollToTop);
+        // ScrollTo takes an x and a y coordinate.
+        // Increase the '10' value to get a smoother/slower scroll!
+        window.scrollTo(0, c - c / 10);
+      }
+    };
+    
+    // When the button is clicked, run our ScrolltoTop function above!
+    scrollToTopButton.onclick = function(e) {
+      e.preventDefault();
+      scrollToTop();
+    }</script>
+  <nav>
+    <div id="log" style="margin-right: 200px;" class="logo">
+      <img class="image"   src="./img/logo.jpg" alt="logo"> 
+    </div> 
+    <ul  class="nav-links">
+      <li>
+
+
+        <div id="search"   class="containers2">
+          <div class="search-box">
+              <input type="text">
+            <span></span>
+          </div>
+      </div>
+    
+
+      </li>
+      <li >
+
+     
+        <a href="./indexy.html" id="account"> <p id="hoverme"> Your Account</p></a>
+          
+      </li>
+      <li >
+          
+      <a  id="hide"  href="#">  <p   id="hide"> login </p> </a>
+      </li>
+      <li>
+        
+         <div class="dropdown">
+          <span><a href="#"> <p  id="hoverme"> Settings</p></a></span>
+          <div class="dropdown-content">
+            <a  onclick="myFunction()" href="#"><p  id="hoverme">Light Mode</p></a><br>
+            <a href="#"><p  id="hoverme">Dark Mode</p></a><br>
+            
+          </div>
+        </div>
+        <script> 
+          function myFunction() { 
+          var element = document.body; 
+          element.classList.toggle("dark"); 
+           
+          } 
+      </script> 
+      </li>
+      <li>
+        <a href="./indexa.html" target="_blank"><p  id="hoverme">About us</p></a> 
+      </li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  <script>
+  const navSlide = () => {
+    const burger =  document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
+     const x = window.matchMedia("(max-width: 480px)");
+     const y = window.matchMedia("(max-width: 1024px)");
+     if(x.matches == true ){
+  navLinks.hidden = true;
+  nav.hidden = true;
+}
+    
+ burger.addEventListener('click' ,()=>{
+   
+// t n 
+ nav.classList.toggle('nav-active');
+ //l
+ 
+  navLinks.forEach((link ,index) =>{
+
+      if(link.style.animation){
+        link.style.animation = '';
+        if(y.matches == true){
+                navLinks.hidden = true;
+                nav.hidden = true;
+    }
+      }else{
+        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;  
+                   
+                if(x.matches == true){
+                navLinks.hidden = false;
+                nav.hidden = false;
+      }
+     }
+    });
+ //animation
+ burger.classList.toggle('toggle');
+ });
+ 
+}
+navSlide();
+
+</script>
+<!--  -->
+<br> 
+     <!-- <h1 style="color: #fff; margin-left: 20%; margin-top: 60px;">Explore</h1> -->
+
+     <h1 class="ml11">
+      <span class="text-wrapper">
+        <span class="line line12"></span>
+        <span class="letters"> Hmamh Explore </span>
+      </span>
+    </h1>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script  >// Wrap every letter in a span
+      var textWrapper = document.querySelector('.ml11 .letters');
+      textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+      
+      anime.timeline({loop: true})
+        .add({
+          targets: '.ml11 .line',
+          scaleY: [0,1],
+          opacity: [0.5,1],
+          easing: "easeOutExpo",
+          duration: 700
+        })
+        .add({
+          targets: '.ml11 .line',
+          translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+          easing: "easeOutExpo",
+          duration: 700,
+          delay: 100
+        }).add({
+          targets: '.ml11 .letter',
+          opacity: [0,1],
+          easing: "easeOutExpo",
+          duration: 600,
+          offset: '-=775',
+          delay: (el, i) => 34 * (i+1)
+        }).add({
+          targets: '.ml11',
+          opacity: 0,
+          duration: 1000,
+          easing: "easeOutExpo",
+          delay: 1000
+        });</script>
+     
+       
+
+
+
+
+
+
+    <section class="u-clearfix u-custom-color-1 u-section-1" id="carousel_8bbc">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div id="carousel-8627" data-interval="5000" data-u-ride="carousel" class="u-carousel u-slider u-slider-1">
+          <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
+            <li data-u-target="#carousel-8627" class="u-active u-grey-30" data-u-slide-to="0"></li>
+            <li data-u-target="#carousel-8627" class="u-grey-30" data-u-slide-to="1"></li>
+          </ol>
+          <div class="u-carousel-inner" role="listbox">
+            <div class="active u-active u-carousel-item u-container-style u-slide u-carousel-item-1">
+              <div class="u-container-layout u-container-layout-1">
+                <div class="u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-gallery u-layout-grid u-lightbox u-no-transition u-show-text-on-hover u-gallery-1">
+                  <div class="u-gallery-inner u-gallery-inner-1"></div>
+                </div>
+                <img src="./img/p1.png" style="margin-right: 120px;" alt="" class="u-image u-image-round u-radius-50 u-image-1" data-image-width="2000" data-image-height="1333">
+                <img src="./img/p2.png" style="margin-left: 70px;" alt="" class="u-image u-image-round u-radius-50 u-image-2" data-image-width="2000" data-image-height="1333">
+                <img src="./img/p3.png" style="margin-left: 400px;" alt="" class="u-image u-image-round u-radius-50 u-image-2" data-image-width="2000" data-image-height="1333">
+              </div>
+            </div>
+            <div class="u-align-left u-carousel-item u-container-style u-expanded-width-xl u-slide u-carousel-item-2">
+              <div class="u-container-layout u-container-layout-2">
+                <img src="./img/p5.png" style="margin-left: 120px;"  alt="" class="u-image u-image-round u-radius-50 u-image-3" data-image-width="2000" data-image-height="1333">
+                <img  src="./img/p4.png"  style="margin-left: 450px; top: 16px;" alt="" class="u-image u-image-round u-radius-50 u-image-4 " data-image-width="2000" data-image-height="1333">
+                <img  src="./img/p6.png"  style="margin-right: 130px;  " alt="" class="u-image u-image-round u-radius-50 u-image-4 " data-image-width="2000" data-image-height="1333">
+               
+                
+              </div>
+            </div>
+          </div>
+          <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-icon-circle u-text-hover-palette-3-base u-text-white u-carousel-control-1" href="#carousel-8627" role="button" data-u-slide="prev">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+                    c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg>
+            </span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-icon-circle u-text-hover-palette-3-base u-text-white u-carousel-control-2" href="#carousel-8627" role="button" data-u-slide="next">
+            <span aria-hidden="true">
+              <svg viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+                    c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg>
+            </span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+
+
+
+
+
+
+
+
+
+
+             
+
+<div class="map">
+	<div id="info">
+	</div>
+	<div id="map"></div>
+</div>
+<script>
+var map = null;
+var arrayPartners = [
+	{lat: 29.0888011, lng: 48.074936},
+	{lat: 29.0888011, lng: 48.074936} 
+	 
+];
+
+var arrayTitlesPartners = [
+	'welcome to hmamh'
+
+];
+
+window.onload = function() {
+ 
+
+	var myOptions = {
+		//center: myLatlng,
+		center: new google.maps.LatLng(29.339985, 48.00853699999999),
+		zoom: 8,
+		scrollwheel: false,
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		disableDefaultUI: true,
+
+		styles: [{"stylers":[{"hue":"#16a085"}]},{"elementType":"geometry","stylers":[{"color":"#272727"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#212121"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"color":"#1c1c1c"}]},{"featureType":"administrative.country","elementType":"labels.text.fill","stylers":[{"color":"#555555"}]},{"featureType":"administrative.land_parcel","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"labels.text.fill","stylers":[{"color":"#555555"}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#292929"}]},{"featureType":"poi.park","elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"featureType":"poi.park","elementType":"labels.text.stroke","stylers":[{"color":"#1b1b1b"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#2c2c2c"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#8a8a8a"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#373737"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#333333"}]},{"featureType":"road.highway.controlled_access","elementType":"geometry","stylers":[{"color":"#2c2c2c"}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#111111"}]},{"featureType":"transit","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#1d1e1c"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#3d3d3d"}]}]
+	};
+
+	map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+	var img = 'http://next-cloud.mx/img/pin.svg';
+
+	var partner1 = new google.maps.Marker({
+		position: arrayPartners[0],
+		map: map,
+		animation: google.maps.Animation.DROP,
+		icon: img
+	});
+
+	var partner2 = new google.maps.Marker({
+		position: arrayPartners[1],
+		map: map,
+		animation: google.maps.Animation.DROP,
+		icon: img
+	});
+
+ 
+
+	 
+	var markers = {
+		'partner-1': partner1,
+		'partner-2': partner2 
+	 
+	};
+
+	// Editable string with html markup for tooltip content
+	var contentString = '<div id="content">'+
+		'<div id="siteNotice">'+
+		'<h3 id="firstHeading" class="mapHeading">Mishcon de Reya</h3>'+
+		'</div>'+
+		'<div id="mapContent">'+
+		'<p>Summit House,<br />'+
+		'12 Red Lion Square</p>'+
+		'</div>'+
+		'</div>';
+
+	var infowindow1 = new google.maps.InfoWindow({
+		content: '<h3 class="mapHeading">' + arrayTitlesPartners[0] + '</h3>'
+	});
+
+
+	var infowindow2 = new google.maps.InfoWindow({
+		content: '<h3 class="mapHeading">'+ arrayTitlesPartners[1] +'</h3>'
+	});
+ 
+
+	google.maps.event.addListener(partner1, 'mouseover', function() {
+		infowindow1.open(map,partner1);
+	});
+
+	google.maps.event.addListener(partner1, 'click', function() {
+		partner(0);
+	});
+	google.maps.event.addListener(partner2, 'click', function() {
+		partner(1);
+	});
+	google.maps.event.addListener(partner3, 'click', function() {
+		partner(2);
+	});
+	google.maps.event.addListener(partner4, 'click', function() {
+		partner(3);
+	});
+
+	google.maps.event.addListener(partner1, 'mouseout', function() {
+		infowindow1.close(map,partner1);
+	});
+
+	google.maps.event.addListener(partner2, 'mouseover', function() {
+		infowindow2.open(map,partner2);
+	});
+
+
+	google.maps.event.addListener(partner2, 'mouseout', function() {
+		infowindow2.close(map,partner2);
+	});
+	google.maps.event.addListener(partner3, 'mouseover', function() {
+		infowindow3.open(map,partner3);
+	});
+	google.maps.event.addListener(partner3, 'mouseout', function() {
+		infowindow3.close(map,partner3);
+	});
+	google.maps.event.addListener(partner4, 'mouseover', function() {
+		infowindow4.open(map,partner4);
+	});
+	google.maps.event.addListener(partner4, 'mouseout', function() {
+		infowindow4.close(map,partner4);
+	});
+	google.maps.event.addListener(partner5, 'mouseover', function() {
+		infowindow5.open(map,partner5);
+	});
+	google.maps.event.addListener(partner5, 'mouseout', function() {
+		infowindow5.close(map,partner5);
+	});
+};
+ 
+  
+  </script>
+<br><br><br><br><br><br>
+ 
+<br><br><br><br><br><br>
+
+
+
+
+    
+    <footer class="u-clearfix u-footer u-grey-80" id="sec-9c32"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="#" class="u-image u-logo u-image-1" data-image-width="80" data-image-height="40">
+          <img src="./img/logof.jpg" class="u-logo-image u-logo-image-1" data-image-width="80">
+        </a>
+        
+        <div class="u-border-1 u-border-white u-expanded-width u-line u-line-horizontal u-opacity u-opacity-50 u-line-1"></div>
+        <p class="u-align-center u-text u-text-1">Hmamh</p>
+
+
+        <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
+          <a class="u-social-url" target="_blank" href=""><span class="u-icon u-icon-circle u-social-facebook u-social-type-logo u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112"  ><use xmlns:xlink="" xlink:href="#svg-5078"></use></svg><svg xmlns=" " xmlns:xlink=" " version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-5078"><path d="M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2 c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
+          </a>
+          <a class="u-social-url" target="_blank" href="https://twitter.com/alshamari__29"><span class="u-icon u-icon-circle u-social-twitter u-social-type-logo u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112"  ><use xmlns:xlink=" " xlink:href="#svg-4343"></use></svg><svg xmlns=" " xmlns:xlink=" " version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-4343"><path d="M92.2,38.2c0,0.8,0,1.6,0,2.3c0,24.3-18.6,52.4-52.6,52.4c-10.6,0.1-20.2-2.9-28.5-8.2 c1.4,0.2,2.9,0.2,4.4,0.2c8.7,0,16.7-2.9,23-7.9c-8.1-0.2-14.9-5.5-17.3-12.8c1.1,0.2,2.4,0.2,3.4,0.2c1.6,0,3.3-0.2,4.8-0.7 c-8.4-1.6-14.9-9.2-14.9-18c0-0.2,0-0.2,0-0.2c2.5,1.4,5.4,2.2,8.4,2.3c-5-3.3-8.3-8.9-8.3-15.4c0-3.4,1-6.5,2.5-9.2 c9.1,11.1,22.7,18.5,38,19.2c-0.2-1.4-0.4-2.8-0.4-4.3c0.1-10,8.3-18.2,18.5-18.2c5.4,0,10.1,2.2,13.5,5.7c4.3-0.8,8.1-2.3,11.7-4.5 c-1.4,4.3-4.3,7.9-8.1,10.1c3.7-0.4,7.3-1.4,10.6-2.9C98.9,32.3,95.7,35.5,92.2,38.2z"></path></svg></span>
+          </a>
+          <a class="u-social-url" target="_blank" href="https://www.instagram.com/hma.29/"><span class="u-icon u-icon-circle u-social-instagram u-social-type-logo u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112"  ><use xmlns:xlink=" " xlink:href="#svg-72f4"></use></svg><svg xmlns=" " xmlns:xlink=" " version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-72f4"><path d="M55.9,32.9c-12.8,0-23.2,10.4-23.2,23.2s10.4,23.2,23.2,23.2s23.2-10.4,23.2-23.2S68.7,32.9,55.9,32.9z M55.9,69.4c-7.4,0-13.3-6-13.3-13.3c-0.1-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3C69.3,63.5,63.3,69.4,55.9,69.4z"></path><path d="M79.7,26.8c-3,0-5.4,2.5-5.4,5.4s2.5,5.4,5.4,5.4c3,0,5.4-2.5,5.4-5.4S82.7,26.8,79.7,26.8z"></path><path d="M78.2,11H33.5C21,11,10.8,21.3,10.8,33.7v44.7c0,12.6,10.2,22.8,22.7,22.8h44.7c12.6,0,22.7-10.2,22.7-22.7 V33.7C100.8,21.1,90.6,11,78.2,11z M91,78.4c0,7.1-5.8,12.8-12.8,12.8H33.5c-7.1,0-12.8-5.8-12.8-12.8V33.7 c0-7.1,5.8-12.8,12.8-12.8h44.7c7.1,0,12.8,5.8,12.8,12.8V78.4z"></path></svg></span>
+          </a>
+         
+        </div>
+
+      </div>
+    
+     
+    
+    </footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="#" target="_blank">
+        <span  style="color: white;">hmamh</span>
+      </a>
+      <p class="u-text">
+        <span>Copyright 2020,</span>
+      </p>
+      <a class="u-link" href="https://twitter.com/alshamari__29" target="_blank">
+        <span  style="color: white;"> by Hamad Al-Shammari</span>
+      </a>. 
+    </section>
+   
+ 
+
+
+ 
+
+
+
+
+
+
+<script>
+    
+</script>
+
+<!--  -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyASZYNHupYc04wrTZr28U67oHXZrS4grW0",
+    authDomain: "hmamh-3d8d5.firebaseapp.com",
+    databaseURL: "https://hmamh-3d8d5.firebaseio.com",
+    projectId: "hmamh-3d8d5",
+    storageBucket: "hmamh-3d8d5.appspot.com",
+    messagingSenderId: "779121588551",
+    appId: "1:779121588551:web:39aefca67fd7a49aeff462",
+    measurementId: "G-J6RT9CDQMF"
+  };                      
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- <script src="./script.js"></script> -->
+    <script src="./auth.js"></script>
+    <!--  -->
+</body>
+
+</html>
