@@ -19,7 +19,7 @@
           <script src="wpt/lib/jquery.waypoints.min.js"></script>
           <script src="wpt/lib/shortcuts/inview.min.js"></script>
           <link rel="shortcut icon" type="image/x-icon" href="./img/head.jpg" />
-
+          <script src="https://smtpjs.com/v3/smtp.js"></script>  
           <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
           <link rel="stylesheet" href="./nicepage.css" media="screen">
           <link rel="stylesheet" href="./Page-1.css" media="screen">
@@ -846,12 +846,12 @@ form > div > textarea{
             
 
 .top-link {
-  transition: all .25s ease-in-out;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  display: inline-flex;
-  z-index: 10000 ;
+    transition: all .25s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-flex;
+    z-index: 10000 ;
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -915,7 +915,7 @@ form > div > textarea{
 			   function pageload(){var e=(new Date).getTime(),t=(e-before)/1e3,n=document.getElementById("loadingtime");n.innerHTML="Page load: "+t+" seconds."}window.onload=function(){pageload()},setTimeout(function(){document.body.className+=" loaded"},2500),document.addEventListener?document.addEventListener("DOMContentLoaded",function(){document.removeEventListener("DOMContentLoaded",arguments.callee,!1),domReady()},!1):document.attachEvent&&document.attachEvent("onreadystatechange",function(){"complete"===document.readyState&&(document.detachEvent("onreadystatechange",arguments.callee),domReady())});
 		  </script>
 		  
-
+<!-- 
       <a class="top-link hide" href="" id="js-top">
         <svg id="vg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
         <span class="screen-reader-text"> </span>
@@ -957,7 +957,7 @@ form > div > textarea{
     scrollToTopButton.onclick = function(e) {
     e.preventDefault();
     scrollToTop();
-    }</script>
+    }</script> -->
       
         <header>
             <div id="icon">
@@ -967,10 +967,10 @@ form > div > textarea{
             <div id="header">
                 <ul>
                     <li><a href="#headSection">Home Page</a></li>
-                    <li><a href="#sectionOne">About Us</a></li>
+                    <li><a href="#sectionOne">Pages</a></li>
                     <li><a href="#sectionTwo">Services</a></li>
                     <li><a href="#sectionFour">Contact</a></li>
-                    <li><a href="#portfolio-div">Portfolio</a></li>
+                    <li><a href="#portfolio-div"> footer </a></li>
                 </ul>
             </div>
     
@@ -1067,10 +1067,10 @@ anime.timeline({loop: true})
                             <div id="nameErr" class="errorMes"></div>
     
                             <input type="email" name="useremail" placeholder="Email" id="emailField"><br/>
-                            <div id="emailErr" class="errorMes"></div>
+                            <!-- <div id="emailErr" class="errorMes"></div> -->
     
                             <input type="text" name="subject" placeholder="Subject" id="subField">
-                            <div id="subErr" class="errorMes"></div>
+                            <!-- <div id="subErr" class="errorMes"></div> -->
     
                         </div>
                         <div class="col-md-6">
@@ -1083,10 +1083,28 @@ anime.timeline({loop: true})
             </div>
         </section>
     
-    
-       
-    <footer class="u-clearfix u-footer u-grey-80" id="sec-9c32"><div class="u-clearfix u-sheet u-sheet-1">
-      <a href="#" class="u-image u-logo u-image-1" data-image-width="80" data-image-height="40">
+    <script>
+     document.querySelector('#formButton').addEventListener('click', (e) => {
+     e.preventDefault();
+        let name = document.getElementById('nameField').value;
+        let email = document.getElementById('emailField').value;
+        let text = document.getElementById('textField').value;
+      Email.send({
+      	Host: "smtp.gmail.com",
+      	Username : "hmamhproco@gmail.com",
+      	Password : "Hmamh29&@",
+      	To : 'Hamad.bfab@gmail.com',
+      	From : email,
+      	Subject : name,
+      	Body : text,
+	}).then(
+		message => alert("mail sent successfully")
+	);
+});
+    </script>
+       <div id="portfolio-div" style="background-color: #333333; margin: 0px;" >
+    <footer  class="u-clearfix u-footer u-grey-80" id="sec-9c32 "><div class="u-clearfix u-sheet u-sheet-1">
+      <a href="#" class="u-image u-logo u-image-1"  data-image-width="80" data-image-height="40">
         <img src="./img/logof.jpg" class="u-logo-image u-logo-image-1" data-image-width="80">
       </a>
       
@@ -1103,12 +1121,11 @@ anime.timeline({loop: true})
         </a>
          
       </div>
-
-    </div>
-  
+ 
 
  
   </footer>
+</div>
   <section class="u-backlink u-clearfix u-grey-80">
     <a class="u-link" href="#" target="_blank">
       <span style="color: white;">hmamh</span>

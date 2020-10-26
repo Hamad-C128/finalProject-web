@@ -15,7 +15,7 @@ firebase.auth().onAuthStateChanged(function (user) {
         edtb.style.visibility = "visible";
         gid.innerHTML= 'Logout';
         
-    
+        document.getElementById('google').style.visibility = "hidden";
 
         
        // User is signed in.
@@ -30,6 +30,8 @@ firebase.auth().onAuthStateChanged(function (user) {
         crd.style.visibility = "hidden";
         edtb.style.visibility = "hidden";
         document.getElementById('out').style.marginTop = '-50px';
+        document.getElementById('google').style.visibility = "visible";
+
         // User is signed out.
     }
 
